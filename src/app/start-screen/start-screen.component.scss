@@ -22,6 +22,8 @@
     max-height: 65vh;
     max-width: 70vw;
     object-fit: contain;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .background-img {
@@ -43,6 +45,7 @@
         width: 25vw;
         min-width: 300px;
         height: auto;
+        
 
         &:hover {
             filter: brightness((1.1));
