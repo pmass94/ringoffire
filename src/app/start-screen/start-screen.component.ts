@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Game } from 'src/models/game';
 
 @Component({
   selector: 'app-start-screen',
@@ -16,6 +17,7 @@ export class StartScreenComponent implements OnInit {
   //start game
   newGame(){
 
+   
     this.router.navigateByUrl('/game');
   }
 
