@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     max-width: 100%;
-    background-image: url('/assets/img/profile/board.jpg');
+    background-image: url("/assets/img/profile/board.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,12 @@
 
     &:hover {
         transform: scale(1.05) translateY(-10px);
+    }
 }
+
+.played-card {
+    right: 2rem;
+    transform: scale(1.2) translateX(13rem) translateY(-15rem) rotate(-15deg);
 }
 
 .pick-card {
@@ -34,7 +39,7 @@
 @keyframes pick-card-animation {
     0% {
         transform: scale(1);
-    }   
+    }
     40% {
         transform: scale(1.5);
     }
@@ -44,4 +49,22 @@
     100% {
         transform: scale(1.2) translateX(13rem) translateY(-15rem) rotate(-15deg);
     }
-} 
+}
+
+.player-position {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.btn-add {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    background-color: rgba(91, 133, 177);
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgba(223, 224, 220);
+    }
+}
