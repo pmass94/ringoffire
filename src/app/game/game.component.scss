@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     max-width: 100%;
-    background-image: url("/assets/img/profile/board.jpg");
+    background-image: url("../../assets/img/profile/board.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,4 +67,12 @@
         transform: scale(1.1);
         background-color: rgba(223, 224, 220);
     }
+}
+
+.pin-bottom {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
 }
