@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -14,16 +16,50 @@ export class GameComponent implements OnInit {
   game: Game;
 
 
-  constructor(public dialog: MatDialog) { }
+
+
+  constructor(
+    private route: ActivatedRoute,
+    private firestore: AngularFirestore,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.newGame();
+
+
+    this
+      .firestore
+      .collection('games')
+      .valueChanges()
+      .subscribe((game) => {
+        console.log('Game update', game);
+      });
+
+
+
+
   }
+
+  /** Subscribe to game-changes in database and update local game object   
+
+  processGameUpdates() {
+    this.firestore
+      .collection('games') // access 'games' collection in firebase
+      .doc(this.gameId) // refer to a specific game via game-id
+      .valueChanges()
+      .subscribe((game) => {
+        console.log('Game update', game);
+      });
+  }*/
 
   newGame() {
     this.game = new Game();
+    this.firestore
+      .collection('games')
+      .add(this.game.toJson());
 
   }
+
 
 
 
