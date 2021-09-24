@@ -17,6 +17,7 @@ import { GameInfoComponent } from './game-info/game-info.component';
 import { MatCardModule } from '@angular/material/card';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { environment } from '../environments/environment';
     GameComponent,
     PlayerComponent,
     DialogAddPlayerComponent,
-    GameInfoComponent
+    GameInfoComponent,
+    EditPlayerComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

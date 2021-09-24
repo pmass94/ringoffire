@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameInfoComponent } from './game-info.component';
+import { EditPlayerComponent } from './edit-player.component';
 
-describe('GameInfoComponent', () => {
-  let component: GameInfoComponent;
-  let fixture: ComponentFixture<GameInfoComponent>;
+describe('EditPlayerComponent', () => {
+  let component: EditPlayerComponent;
+  let fixture: ComponentFixture<EditPlayerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GameInfoComponent]
+      declarations: [ EditPlayerComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GameInfoComponent);
+    fixture = TestBed.createComponent(EditPlayerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

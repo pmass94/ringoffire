@@ -1,4 +1,4 @@
-<app-player *ngFor="let player of game.players; let i = index;" [ngStyle]="{'top.rem':1 + (i * 5)}"
+<app-player (click)="editPlayer(i)" *ngFor="let player of game.players; let i = index;" [ngStyle]="{'top.rem':1 + (i * 5)}"
     [playerActive]="i == game.currentPlayer" [name]="player" class="player-position"></app-player>
 
 <div class="field">

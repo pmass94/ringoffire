@@ -8,9 +8,9 @@ describe('StartScreenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StartScreenComponent ]
+      declarations: [StartScreenComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

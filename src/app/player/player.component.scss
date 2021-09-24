@@ -22,3 +22,39 @@
 .player-active {
     background-color: rgba(240, 175, 50, 0.9) !important;
 }
+
+@media (max-width: 1200px), (max-height: 700px) {
+    .player {
+        max-width: 20rem;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.3rem;
+        }
+        span {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .player {
+        width: 14rem;
+        max-width: 75vw;
+    }
+}
+
+@media (max-width: 450px), (max-height: 600px) {
+    .player {
+        img {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.2rem;
+        }
+        span {
+            font-size: 1.4rem;
+            margin-left: 1rem;
+        }
+    }
+}
