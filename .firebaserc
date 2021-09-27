@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "ring-of-fire-a4590": {
-      "hosting": {
-        "ringoffire": [
-          "ring-of-fire-a4590"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "ring-of-fire-a4590"
   }
